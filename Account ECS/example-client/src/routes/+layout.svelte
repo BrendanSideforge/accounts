@@ -2,17 +2,30 @@
 <script lang="ts">
 
     import { onMount } from "svelte";
-    import axios from "axios";
     import { auth_state } from "../store";
+    import { supabase } from "../supabase";
 
     onMount(async () => {
 
-        const account_data = await axios.get("http://localhost:3001/accounts/account-data", { withCredentials: true });
+        const session = ((await supabase.auth.getSession()).data.session);
 
-        if (!account_data.data.found) return;
+        console.log(session);
+        $auth_state.session = session;
 
-        $auth_state = account_data.data;
-
+        supabase.auth.onAuthStateChange(
+            async (_event, session) => {
+                switch(_event) {
+                    case "SIGNED_IN":
+                        $auth_state = session;
+                        break;
+                    case "SIGNED_OUT":
+                        $auth_state = {};
+                        break;
+                    default:
+                        break;
+                }
+            }
+        )
     })
 
 </script>
