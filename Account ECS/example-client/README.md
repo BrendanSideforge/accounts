@@ -4,6 +4,8 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## ENV file 
 
+Create .env file in the top directory of (example-client).
+
 > VITE_SUPABASE_URL = look at the supabase website, to find the authentication url
 > VITE_SUPABASE_ANON_KEY = look at the supabase website, to find the anon key
 
