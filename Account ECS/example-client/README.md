@@ -2,6 +2,11 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
+## ENV file 
+
+VITE_SUPABASE_URL = look at the supabase website, to find the authentication url
+VITE_SUPABASE_ANON_KEY = look at the supabase website, to find the anon key
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
