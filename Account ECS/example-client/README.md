@@ -4,8 +4,8 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## ENV file 
 
-VITE_SUPABASE_URL = look at the supabase website, to find the authentication url
-VITE_SUPABASE_ANON_KEY = look at the supabase website, to find the anon key
+> VITE_SUPABASE_URL = look at the supabase website, to find the authentication url
+> VITE_SUPABASE_ANON_KEY = look at the supabase website, to find the anon key
 
 ## Creating a project
 
